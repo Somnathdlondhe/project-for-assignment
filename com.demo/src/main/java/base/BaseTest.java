@@ -13,7 +13,7 @@ import org.testng.annotations.*;
 public class BaseTest {
 	public static WebDriver driver;
 	
-@BeforeTest
+@BeforeMethod
 	public void browserConfig() throws Exception  {
 		ChromeOptions options = new ChromeOptions();
         options.setBrowserVersion("128");
@@ -25,7 +25,7 @@ public class BaseTest {
 	    prop.load(fis);
 	    driver.get(prop.getProperty("url"));
 	}
-	@AfterTest
+	@AfterMethod
 	public void closeDriver() {
 		driver.quit();
 	}

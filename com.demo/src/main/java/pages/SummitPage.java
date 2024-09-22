@@ -49,8 +49,15 @@ public class SummitPage extends BaseTest {
 
 	//Page=2
 	
-	@FindBy(xpath="//input[@aria-label='* Do you currently use Entrata?']")
+//	@FindBy(xpath="//input[@aria-label='* Do you currently use Entrata?']")
+//	WebElement useEntrata;
+	
+	@FindBy(xpath="//*[@data-cvent-id='async-dropdown-wrapper']")
 	WebElement useEntrata;
+	
+	@FindBy(xpath="	//input[@aria-activedescendant='react-select-4-option-2']")
+	WebElement option_2;
+
 	
 	
 	
@@ -88,6 +95,8 @@ public class SummitPage extends BaseTest {
 		mobile.sendKeys(mobileValue);
 		forwardButton.click();
 		Utils.staticSleep(3000);
+		
+		;
 		
 	}
 	

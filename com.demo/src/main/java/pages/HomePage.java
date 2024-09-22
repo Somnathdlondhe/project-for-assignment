@@ -48,6 +48,8 @@ public class HomePage extends BaseTest {
 	@FindBy(id="demoRequest")   //dropdown
 	WebElement demoRequest;
 	
+	@FindBy(xpath="//div[contains(text(),'Watch Demo')]/parent ::a")
+	WebElement demo_button;
 	
 	
 	public void fillDetailsToDemoForm(String firstNameValue, String lastNameValue, String emailValue, String companyValue, String phoneValue, String titleValue) {
@@ -74,6 +76,14 @@ public class HomePage extends BaseTest {
 		demoRequest_drop.selectByVisibleText("a Resident");
 		
 		
+		
+	}
+	
+	public boolean isWatchDemoButtonWorks() {
+		demo_button.click();
+		String page_title= driver.getTitle();
+		System.out.println("Title of Demo Page is :" +page_title);
+		return page_title.equals("Entrata | Optimize Property Management with One Platform");
 		
 	}
 	

@@ -12,9 +12,7 @@ import testUtils.ExcelUtils;
 
 public class SummitRegistrationTest extends BaseTest {
 	SummitPage summitPage;
-	public SummitRegistrationTest() throws Exception {
-		super();
-	}
+
 	
 	@BeforeMethod
 	public void init() throws Exception {

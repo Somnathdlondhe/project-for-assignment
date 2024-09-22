@@ -20,9 +20,6 @@ import org.testng.ITestResult;
 public class HomePageTest extends BaseTest {
 	HomePage homePage;
 	
-	public HomePageTest() throws Exception {
-		super();
-	}
 	
 	@BeforeMethod
 	public void init() throws Exception {
@@ -52,4 +49,9 @@ public class HomePageTest extends BaseTest {
 	    }  
 	}
 	
+	@Test
+	public void isDemoButtonWorks() {
+		Assert.assertEquals(homePage.isWatchDemoButtonWorks(), true);
+
+	}
 }
