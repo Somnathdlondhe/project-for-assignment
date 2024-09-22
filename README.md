@@ -30,3 +30,29 @@ This project demonstrates automation testing using Selenium WebDriver, Java, and
    ```bash
    git clone [https://github.com/yourusername/your-repo.git](https://github.com/Somnathdlondhe/project-for-assignment.git)
    cd your-repo
+
+   
+Project Structure:
+   YourProject
+│
+├── src
+│   ├── main
+│   │   └── java
+│   │       └── com
+│   │           └── yourpackage
+│   │               ├── pages
+│   │               │   ├── HomePage.java
+│   │               │   └── LoginPage.java
+│   │               └── utils
+│   │                   └── WebDriverManager.java
+│   │
+│   └── test
+│       └── java
+│           └── com
+│               └── yourpackage
+│                   ├── tests
+│                   │   ├── LoginTest.java
+│                   │   └── HomeTest.java
+│                   └── testng.xml
+│
+└── pom.xml
