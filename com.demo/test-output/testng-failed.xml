@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.HomePageTest">
+      <class name="testCases.Products_AccountingLinksTest">
         <methods>
           <include name="closeDriver"/>
           <include name="browserConfig"/>
-          <include name="isDemoButtonWorks"/>
           <include name="init"/>
+          <include name="Bill_PayLinkTest"/>
         </methods>
-      </class> <!-- testCases.HomePageTest -->
+      </class> <!-- testCases.Products_AccountingLinksTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

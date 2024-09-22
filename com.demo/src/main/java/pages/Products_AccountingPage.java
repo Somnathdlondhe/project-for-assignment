@@ -32,17 +32,47 @@ public class Products_AccountingPage extends BaseTest {
 	
 	@FindBy(xpath="//*[@class='footer-column mb-bg']//a[contains(text(),'Bill Pay')]")
 	WebElement 	Bill_Pay;
-	
+	public boolean isGeneral_AccountingLinkWorks() {
+		Utils.waitUntilElementToBeVisibleAndHover(Products);
+		Utils.staticSleep(3000);
+		Utils.JsClick(General_Accounting);
+		Utils.staticSleep(3000);
+		String Actual_title=driver.getTitle();
+		System.out.println("Title of General_Accounting Page: "+Actual_title);
+		return Actual_title.equals("General Accounting by Entrata | Accounting tools and financial reporting");
+	}
 
 	public boolean isGeneral_BudgetingLinkWorksUnderAccounting() {
 		//hover to product
 		Utils.waitUntilElementToBeVisibleAndHover(Products);
-		Utils.staticSleep(5000);
+		Utils.staticSleep(3000);
 		Utils.JsClick(Budgeting);
-		Utils.staticSleep(5000);
+		Utils.staticSleep(3000);
 		String Actual_title=driver.getTitle();
 		System.out.println("Title of Budgeting Page: "+Actual_title);
 		return Actual_title.equals("Budgeting by Entrata | Ditch the Spreadsheets");
 		
 	}	
+	
+	public boolean isJob_CostingLinkWorks() {
+		Utils.waitUntilElementToBeVisibleAndHover(Products);
+		Utils.staticSleep(3000);
+		Utils.JsClick(Job_Costing);
+		Utils.staticSleep(3000);
+		String Actual_title=driver.getTitle();
+		System.out.println("Title of JobCosting Page: "+Actual_title);
+		return Actual_title.equals("Job Costing by Entrata");
+		
+	}
+	
+	public boolean isBill_Pay_LinkWorks() {
+		Utils.waitUntilElementToBeVisibleAndHover(Products);
+		Utils.staticSleep(3000);
+		Utils.JsClick(Bill_Pay);
+		Utils.staticSleep(3000);
+		String Actual_title=driver.getTitle();
+		System.out.println("Title of Bill_Pay Page: "+Actual_title);
+		return Actual_title.equals("Bill Pay");
+		
+	}
 }
